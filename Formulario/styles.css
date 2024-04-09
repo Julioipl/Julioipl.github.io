@@ -64,6 +64,6 @@ button[type="submit"]:hover {
 
 .dark-mode input, .dark-mode textarea {
     background-color: #333;
-    color: #000;
+    color: #fff;
     border: 1px solid #555;
 }
