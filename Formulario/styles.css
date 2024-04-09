@@ -9,7 +9,14 @@ body {
 	height: 100vh;
 }
 
-
+.container {
+    width: 50%;
+    margin: 25px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 
 .form-group {
@@ -57,6 +64,6 @@ button[type="submit"]:hover {
 
 .dark-mode input, .dark-mode textarea {
     background-color: #333;
-    color: #fff;
+    color: #000;
     border: 1px solid #555;
 }
