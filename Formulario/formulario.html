@@ -8,6 +8,7 @@
 </head>
 <body>
 	<div class="container">
+		<button id="modoOscuroBtn">Modo Oscuro</button>
 		<form action="https://www.toptal.com/developers/postbin/1709604060562-5416500680148" method="post" target = "_blank">
 			<div class="form-group">
 				<label for="nombre">Nombre y Apellidos:</label>
@@ -28,5 +29,14 @@
 				<input type="submit" value = "Enviar">
 		</form>
 	</div>
+	<script>
+    const botonModoOscuro = document.getElementById('modoOscuroBtn');
+    const body = document.body;
+
+    botonModoOscuro.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+    });
+</script>
+
 </body>
 </html>
