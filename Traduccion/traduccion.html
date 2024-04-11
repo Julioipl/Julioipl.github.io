@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traducción</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="button" onclick="changeLanguage('en')">English</button>
+        <button class="button" onclick="changeLanguage('es')">Español</button>
+        <button class="button" onclick="changeLanguage('de')">Deutsch</button>
+        <button class="button" onclick="changeLanguage('fr')">Francais</button>
+        <button class="button" onclick="changeLanguage('it')">Italiano</button>
+        <h1 id="big_text">Hola Mundo</h1>
+        <h2 id="paragraph">Espera mas información</h2>
+    </div>
+
+    <script>
+        function changeLanguage(lang) {
+            fetch('lang.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('big_text').innerText = data[lang]['big_text'];
+                    document.getElementById('paragraph').innerText = data[lang]['paragraph'];
+                })
+                .catch(error => console.error('Error fetching translation:', error));
+        }
+    </script>
+</body>
+</html>
